@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Footer = () => {
   return (
-    <div>Footer</div>
-  )
-}
+    <h5 className="footerheading">
+      All Rights Reserved @Foodvilla by Ashok Manjhu
+    </h5>
+  );
+};
 
-export default Footer
+export default Footer;

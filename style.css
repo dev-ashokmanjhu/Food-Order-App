@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: 300;
   font-family: "Courier New", Courier, monospace;
+  text-align: center;
 }
 /* img {
   width: 100%;
@@ -18,9 +18,11 @@ body {
   color: #3d4152;
   font-size: 16px;
   font-weight: 700;
+  overflow: hidden;
 }
 
 .logo {
+  width: 50px;
   padding: 0 30px;
 }
 .title {
@@ -43,8 +45,9 @@ li {
 .bodyContainer {
   background-color: #171a29;
   color: white;
-  font-size: 16px;
-  font-weight: 700;
+
+  padding: 50px;
+  overflow: hidden;
 }
 .heading {
   text-align: center;
@@ -61,6 +64,7 @@ li {
   border: 1px solid white;
   text-align: center;
   border-radius: 5px;
+  word-wrap: break-word;
 }
 .cardContainer:hover {
   box-shadow: rgb(0 0 0/80%) 0px 40px 58px -16px,

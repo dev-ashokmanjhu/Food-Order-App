@@ -1,16 +1,18 @@
 import React from "react";
+import { IMG_CDN_URL } from "../constants";
 
-const Card = () => {
+const Card = ({ restaurant }) => {
+  const { name, cuisines, area, cloudinaryImageId } = restaurant.data;
   return (
     <div className="cardContainer">
       <img
         className="cardimg"
-        src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep"
+        src={IMG_CDN_URL + cloudinaryImageId}
         alt="thumbnail"
       />
-      <h2>Name</h2>
-      <h3>Name</h3>
-      <h4>Ratings</h4>
+      <h2>{name}</h2>
+      <p>{cuisines.join(",")}</p>
+      <h4>{area}</h4>
     </div>
   );
 };
