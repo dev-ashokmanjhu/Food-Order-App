@@ -5,6 +5,10 @@ const Body = () => {
   return (
     <div className="bodyContainer">
       <h1 className="heading">Top Restaurats</h1>
+      <div className="searchcontainer">
+        <input type="text" name="search" id="searchinput" />
+        <button className="searchBtn">Search</button>
+      </div>
       <div className="cards">
         <Card />
         <Card />
