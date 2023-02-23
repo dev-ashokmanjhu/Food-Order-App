@@ -1,11 +1,12 @@
 {
   "name": "foodvilla",
   "version": "1.0.0",
+  "source": "index.html",
   "description": "A food ordering app",
-  "main": "App.js",
   "scripts": {
     "start": "parcel index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build"
   },
   "author": "Ashok Manjhu",
   "license": "ISC",
