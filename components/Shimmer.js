@@ -10,7 +10,7 @@ const Shimmer = () => {
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
-            <div class="line"></div>
+
             <div class="shimmer"></div>
           </article>
         ))}
