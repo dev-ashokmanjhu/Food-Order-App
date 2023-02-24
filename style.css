@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 }
 /* img {
@@ -59,12 +59,14 @@ li {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 20px;
+  padding: 30px;
 }
 .cardContainer {
   border: 1px solid white;
   text-align: center;
   border-radius: 5px;
   word-wrap: break-word;
+  height: 450px;
 }
 .cardContainer:hover {
   box-shadow: rgb(0 0 0/80%) 0px 40px 58px -16px,
@@ -116,6 +118,10 @@ li {
   color: white;
 }
 /* Shimmer Css */
+.shimmer {
+  background-color: #171a29;
+  padding: 50px;
+}
 article {
   background: #ddd;
   width: 100%;
@@ -157,4 +163,33 @@ article .shimmer {
   to {
     transform: translateX(200%);
   }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.resMenuContainer {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant-detail {
+  background-color: #171a29;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.resMenu {
+  display: flex;
+  justify-content: space-between;
+}
+.itemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.itemImg {
+  width: 200px;
 }

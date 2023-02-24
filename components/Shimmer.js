@@ -2,16 +2,16 @@ import Card from "./Card";
 
 const Shimmer = () => {
   return (
-    <div className="cards">
+    <div className="cards shimmer">
       {Array(8)
         .fill("")
         .map((arr, i) => (
           <article key={i}>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="shimmer"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="line"></div>
+            <div className="shimmer"></div>
           </article>
         ))}
     </div>

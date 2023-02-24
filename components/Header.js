@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
@@ -14,16 +15,25 @@ const Header = () => {
   return (
     <div className="header">
       <div className="title">
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <div className="location">Jaipur,Rajasthan,India</div>
       </div>
-      <h1>FoodVilla</h1>
+      <Link to="/">
+        <h1>FoodVilla</h1>
+      </Link>
       <div className="navitems">
         <ul>
-          <li>Offers</li>
-          <li>Help</li>
-          <li>Profile</li>
-          <li>Cart</li>
+          <Link to="/offers">
+            <li>Offers</li>
+          </Link>
+          <Link to="/help">
+            <li>Help</li>
+          </Link>
+          <Link to="/cart">
+            <li>Cart</li>
+          </Link>
         </ul>
       </div>
     </div>
