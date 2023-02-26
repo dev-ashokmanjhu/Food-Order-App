@@ -15,6 +15,7 @@ const RestaurantMenu = () => {
         id
     );
     const json = await response.json();
+    console.log(json);
     setRestaurant(json?.data);
   }
   if (!restaurant) {
@@ -75,7 +76,7 @@ const RestaurantMenu = () => {
             >
               <div className="itemDetail">
                 <h3 className="font-normal text-sm">{item.name}</h3>
-                <h3 className="text-left text-xs">{item.price}</h3>
+                <h3 className="text-left text-xs">₹{item.price / 100}</h3>
               </div>
               <div className="itemImgContainer">
                 <img

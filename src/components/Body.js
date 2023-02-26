@@ -35,7 +35,6 @@ const Body = () => {
     );
     return data;
   };
-  console.log(restaurants);
 
   return (
     <div className="bodyContainer">
@@ -64,7 +63,7 @@ const Body = () => {
       {!restaurants ? (
         <Shimmer />
       ) : (
-        <div className="grid grid-cols-4 gap-3 p-3">
+        <div className="grid grid-cols-4 sm:grid-cols-2 gap-3 p-3">
           {filteredRestaurants.map((restaurant) => (
             <Link
               to={"/restaurant/" + restaurant.data.id}
