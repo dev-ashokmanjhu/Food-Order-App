@@ -43,7 +43,7 @@ const Body = () => {
       <div className="flex justify-center items-center m-3">
         <input
           type="text"
-          className="border-2 border-gray-500 rounded-md hover:border-green-400 p-1 font-bold"
+          className="border-2 border-gray-500 rounded-md hover:border-green-400 p-1 font-bold "
           name="search"
           id="searchinput"
           value={searchInput}
