@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { IMG_CDN_URL } from "../constants";
+import { IMG_CDN_URL, restaurantData } from "../constants";
 import Shimmer from "./Shimmer";
 
 const RestaurantMenu = () => {
@@ -10,14 +10,18 @@ const RestaurantMenu = () => {
     getRestaurant();
   }, []);
   async function getRestaurant() {
-    const response = await fetch(
-      "https://www.swiggy.com/dapi/menu/v4/full?lat=28.7040592&lng=77.10249019999999&menuId=" +
-        id
-    );
-    const json = await response.json();
-    console.log(json);
-    setRestaurant(json?.data);
+    try {
+      const response = await fetch(
+        "https://www.swiggy.com/dapi/menu/v4/full?lat=28.7040592&lng=77.10249019999999&menuId=" +
+          id
+      );
+      const json = await response.json();
+      setRestaurant(json?.data);
+    } catch (error) {
+      setRestaurant(restaurantData[0]?.data);
+    }
   }
+
   if (!restaurant) {
     return <Shimmer />;
   }
