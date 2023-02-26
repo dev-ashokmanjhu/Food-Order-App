@@ -38,11 +38,10 @@ const Body = () => {
 
   return (
     <div className="bodyContainer">
-      <h1 className="text-center font-bold font-sans">Top Restaurats</h1>
       <div className="flex justify-center items-center m-3">
         <input
           type="text"
-          className="border-2 border-gray-500 rounded-md hover:border-green-400 p-1 font-bold "
+          className="border-2 border-blue-500  rounded-md hover:border-green-400 p-1 font-bold "
           name="search"
           id="searchinput"
           value={searchInput}
@@ -52,7 +51,7 @@ const Body = () => {
           }}
         />
         <button
-          className="border-2  mx-2 rounded-md bg-blue-500 hover:bg-transparent text-white p-1 hover:text-black"
+          className=" mx-2 rounded-md bg-blue-500 hover:bg-transparent text-white p-1 hover:text-black"
           onClick={() =>
             setFilteredRestaurants(filterRestaurants(restaurants, searchInput))
           }

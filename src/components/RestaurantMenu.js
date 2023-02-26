@@ -29,9 +29,12 @@ const RestaurantMenu = () => {
     <div className="flex flex-col">
       <div className="flex justify-between items-center text-center bg-[#282c3f] p-2 text-white">
         <div>
-          <img src={IMG_CDN_URL + restaurant.cloudinaryImageId} />
+          <img
+            className="rounded-md w-52 "
+            src={IMG_CDN_URL + restaurant.cloudinaryImageId}
+          />
         </div>
-        <div className="text-left p-6 flex flex-col justify-between">
+        <div className="text-left p-3 flex flex-col justify-between">
           <h2 className="font-bold">{restaurant.name}</h2>
           <h3 className="font-light text-xs">
             {restaurant.cuisines.join(",")}
@@ -39,26 +42,26 @@ const RestaurantMenu = () => {
           <h4 className="font-light text-xs">
             {restaurant.area} {restaurant.locality}
           </h4>
-          <div className="flex justify-between">
-            <div>
+          <div className="flex justify-between text-center">
+            <div className="p-2">
               <h5 className="font-bold text-sm">
                 {restaurant.avgRatingString}
               </h5>
-              <h5 className="font-light text-xs">
+              <h5 className="font-light text-[6px]">
                 {restaurant.totalRatings}+ Rating
               </h5>
             </div>
-            <div>
+            <div className="p-2">
               <h5 className="font-bold text-sm">
                 {restaurant.deliveryTime || "0"}
               </h5>
-              <h5 className="font-light text-xs">Delivery Time</h5>
+              <h5 className="font-light text-[6px]">Delivery Time</h5>
             </div>
-            <div>
+            <div className="p-2">
               <h5 className="font-bold text-sm">
                 {restaurant.avgRatingString}
               </h5>
-              <h5 className="font-light text-xs">Cost for Two</h5>
+              <h5 className="font-light text-[6px] ">Cost for Two</h5>
             </div>
           </div>
         </div>
