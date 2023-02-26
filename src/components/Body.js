@@ -39,10 +39,11 @@ const Body = () => {
 
   return (
     <div className="bodyContainer">
-      <h1 className="heading">Top Restaurats</h1>
-      <div className="searchcontainer">
+      <h1 className="text-center font-bold font-sans">Top Restaurats</h1>
+      <div className="flex justify-center items-center m-3">
         <input
           type="text"
+          className="border-2 border-gray-500 rounded-md hover:border-green-400 p-1 font-bold"
           name="search"
           id="searchinput"
           value={searchInput}
@@ -52,7 +53,7 @@ const Body = () => {
           }}
         />
         <button
-          className="searchBtn"
+          className="border-2  mx-2 rounded-md bg-blue-500 hover:bg-transparent text-white p-1 hover:text-black"
           onClick={() =>
             setFilteredRestaurants(filterRestaurants(restaurants, searchInput))
           }
@@ -63,7 +64,7 @@ const Body = () => {
       {!restaurants ? (
         <Shimmer />
       ) : (
-        <div className="cards">
+        <div className="grid grid-cols-4 gap-3 p-3">
           {filteredRestaurants.map((restaurant) => (
             <Link
               to={"/restaurant/" + restaurant.data.id}
