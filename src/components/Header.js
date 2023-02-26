@@ -13,7 +13,7 @@ const Logo = () => {
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="flex justify-between bg-black">
       <div className="title">
         <Link to="/">
           <Logo />

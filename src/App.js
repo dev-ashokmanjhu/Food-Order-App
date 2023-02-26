@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Body from "./components/Body";
 import Cart from "./components/Cart";
+import Error from "./components/Error";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Help from "./components/Help";
@@ -22,6 +23,7 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
