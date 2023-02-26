@@ -13,7 +13,6 @@ const Shimmer = () => {
             <div className="h-8 bg-white rounded-md"></div>
             <div className="h-8 bg-white rounded-md"></div>
             <div className="h-8 bg-white rounded-md"></div>
-            <div className="h-8 bg-white rounded-md"></div>
           </article>
         ))}
     </div>
