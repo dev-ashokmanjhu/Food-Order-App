@@ -74,19 +74,19 @@ const RestaurantMenu = () => {
         <div className="p-3 shadow-md h-[80vh] overflow-scroll">
           {Object.values(restaurant?.menu?.items).map((item) => (
             <div
-              className="flex justify-between m-3 shadow-md p-3"
+              className="flex justify-between items-center m-3 shadow-md p-3"
               key={item.id}
             >
               <div className="itemDetail">
                 <h3 className="font-normal text-sm">{item.name}</h3>
                 <h3 className="text-left text-xs">₹{item.price / 100}</h3>
               </div>
-              <div className="relative m-3">
+              <div className="relative m-3 rounded-md shadow-xl ">
                 <img
-                  className="w-28"
+                  className="w-28 rounded-md shadow-xl"
                   src={IMG_CDN_URL + item.cloudinaryImageId}
                 />
-                <button className="border-2 rounded-md bg-green-500 text-white p-1 px-2 top absolute -bottom-5  right-[29.3333%] text-sm">
+                <button className="border-2 rounded-md bg-green-500 text-white p-1 px-2 top absolute -bottom-3  right-[32.3333%] text-[10px]">
                   ADD
                 </button>
               </div>
