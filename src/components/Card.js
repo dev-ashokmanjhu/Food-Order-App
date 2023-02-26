@@ -11,7 +11,7 @@ const Card = ({ restaurant }) => {
         alt="thumbnail"
       />
       <h2>{name}</h2>
-      <p className="text-xs break-words">{cuisines}</p>
+      <p className="text-xs break-words">{cuisines.join(",")}</p>
       <h4>{area}</h4>
     </div>
   );

@@ -27,7 +27,7 @@ const RestaurantMenu = () => {
   }
   return (
     <div className="flex flex-col">
-      <div className="flex justify-between text-center bg-[#282c3f] p-2 text-white">
+      <div className="flex justify-between items-center text-center bg-[#282c3f] p-2 text-white">
         <div>
           <img src={IMG_CDN_URL + restaurant.cloudinaryImageId} />
         </div>
