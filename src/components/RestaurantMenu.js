@@ -63,11 +63,7 @@ const RestaurantMenu = () => {
           <h3 className="p-3">60% off up to ₹120 | Use code TRYNEW</h3>
         </div>
       </div>
-      <div className="flex justify-between p-2 text-center">
-        <div>
-          <h1>Filters</h1>
-        </div>
-        <hr />
+      <div className="flex justify-center p-2 text-center">
         <div className="p-3 shadow-md h-[80vh] overflow-scroll">
           {Object.values(restaurant?.menu?.items).map((item) => (
             <div
@@ -78,18 +74,17 @@ const RestaurantMenu = () => {
                 <h3 className="font-normal text-sm">{item.name}</h3>
                 <h3 className="text-left text-xs">₹{item.price / 100}</h3>
               </div>
-              <div className="itemImgContainer">
+              <div className="relative m-3">
                 <img
                   className="w-28"
                   src={IMG_CDN_URL + item.cloudinaryImageId}
                 />
+                <button className="border-2 rounded-md bg-green-500 text-white p-1 px-2 top absolute -bottom-5  right-[29.3333%] text-sm">
+                  ADD
+                </button>
               </div>
             </div>
           ))}
-        </div>
-        <hr />
-        <div className="cart">
-          <h1>Cart</h1>
         </div>
       </div>
     </div>

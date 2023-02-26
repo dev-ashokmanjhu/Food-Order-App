@@ -18,7 +18,7 @@ const Header = () => {
         <Link to="/">
           <Logo />
         </Link>
-        <div className="location">Jaipur,Rajasthan,India</div>
+        <div className="location">Jaipur,Rajasthan</div>
       </div>
       <Link to="/">
         <h1>FoodVilla</h1>
